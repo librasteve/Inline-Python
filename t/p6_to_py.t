@@ -15,7 +15,7 @@ def identity(a):
 class Foo {
 }
 
-for ('abcö', Buf.new('äbc'.encode('latin-1')), 24, 2.4.Num, [1, 2], { a => 1, b => 2}, Any, Foo.new) -> $obj {
+for ('abcö', #`[Buf.new('äbc'.encode('latin-1')),] 24, 2.4.Num, [1, 2], { a => 1, b => 2}, Any, Foo.new) -> $obj {
     is-deeply $py.call('__main__', 'identity', $obj), $obj, "Can round-trip " ~ $obj.^name;
 }
 

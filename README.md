@@ -43,6 +43,8 @@ With a python in your path, then build:
     make install
 ```
 
+If you get an error on lines of `[Inline::Python] Cannot locate native library ... libpython3.11.so.1.0: cannot open shared object file: No such file or directory` then please check the path to your python with `which python` and append that the the path using `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/conda/lib` (adjust to your path)
+
 # AUTHOR
 
 Stefan Seifert <nine@detonation.org>
